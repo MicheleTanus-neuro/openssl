@@ -16,7 +16,12 @@
  * function is applied in several functions in this file and this limit
  * ensures that the result fits in an int.
  */
-#define LIMIT_BEFORE_EXPANSION 0x5ffffffc
+
+// Original value is about ~1.5GB
+// #define LIMIT_BEFORE_EXPANSION 0x5ffffffc
+
+// New limit is ~3GB
+#define LIMIT_BEFORE_EXPANSION 0xbffffff8
 
 BUF_MEM *BUF_MEM_new_ex(unsigned long flags)
 {
